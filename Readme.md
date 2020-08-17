@@ -7,7 +7,7 @@
 * My GitHub Profile: https://github.com/HiDe-Techno-Tips
 ***
 Changes in Version 1.0.1:
-*Fixes a small bug in which the Mouse Cursor is hidden even if script is Suspended by pressing F7 before pressing F6 to Show Mouse Cursor.
+* Fixes a small bug in which the Mouse Cursor is hidden even if script is Suspended by pressing F7 before pressing F6 to Show Mouse Cursor.
 ***
 How to Use version 1.0.1: Tested In Game:
 1. Install Auto Hotkey(https://www.autohotkey.com/) if not done already to run the ahk script
