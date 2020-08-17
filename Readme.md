@@ -1,10 +1,16 @@
 Mouse to Keyboard Map tool. Map Mouse Movements and Buttons to Keyboard keys
-Version 1.0.0
+Version 1.0.1
 Author: Hide Techno Tips
 
 Youtube Channel "HiDe Techno Tips HDTT" Link: https://www.youtube.com/channel/UCy3fBVKd0RMY05CgiiuGqSA?sub_confirmation=1
 Please Subscribe to my Youtube Channel.
 My GitHub Profile: https://github.com/HiDe-Techno-Tips
+
+***
+Changes in Version 1.1.0:
+***
+
+Fixes a small bug in which the Mouse Cursor is hidden even if script is Suspended by pressing F7.
 
 ***
 How to Use version 1.0.0. Tested In Game.

@@ -15,6 +15,7 @@ F6::SystemCursor(-1)  ; Pressing the key before "::" shows or hides the Mouse Cu
 return
 
 F7::                  ; Pressing the key before "::" toggles Pause script and Suspend Hotkeys.
+SystemCursor(1)       ; Shows the cursor before Suspending Script.
 Suspend
 Pause, , 1
 return
