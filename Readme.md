@@ -1,20 +1,16 @@
 * Mouse to Keyboard Map tool. Map Mouse Movements and Buttons to Keyboard keys
 * Version 1.0.1
 * Author: Hide Techno Tips
-
+***
 * Youtube Channel "HiDe Techno Tips HDTT" Link: https://www.youtube.com/channel/UCy3fBVKd0RMY05CgiiuGqSA?sub_confirmation=1
 * Please Subscribe to my Youtube Channel.
 * My GitHub Profile: https://github.com/HiDe-Techno-Tips
-
 ***
 Changes in Version 1.0.1:
-
 Fixes a small bug in which the Mouse Cursor is hidden even if script is Suspended by pressing F7 before pressing F6 to Show Mouse Cursor.
-
 ***
-How to Use version 1.0.1. Tested In Game.
-
-1. Install Auto Hotkey if not done already to run the ahk script: https://www.autohotkey.com/
+How to Use version 1.0.1: Tested In Game:
+1. Install Auto Hotkey(https://www.autohotkey.com/) if not done already to run the ahk script
    or Run The exe release directly.
 
 2. Mouse Buttons and Wheel will not work as usual when the script is running, but will simulate keypress as follows:
