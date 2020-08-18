@@ -8,7 +8,6 @@
 
 ToolTip, Mouse Mapping is Off. Press F1 to Toggle Mouse Mapping On and Off. Press F2 to Exit from this Utility.   ; Displays Tooltip message with instruction.
 ToggleMap=0                                                                                                           ; To specify that Mouse Mapping is Off.
-SetTimer, tipOff, -4000                                                                                               ; Label tipOff is referred after 4 secpnds.
 Suspend                                                                                                               ; Suspends Hotkeys.
 Goto MovementMap       ; Movement Mapping should start without Hotkey.
 
@@ -98,7 +97,6 @@ else
    SystemCursor(1)              ; Show Mouse Cursor.
    Suspend, On                  ; Disable Hotkeys.
    ToggleMap=0                  ; To specify that Mouse Mapping is Off.
-   SetTimer, tipoff, -4000      ; Label tipOff is referred after 4 seconds.
   }
 return
 
