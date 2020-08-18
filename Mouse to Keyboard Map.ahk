@@ -6,7 +6,7 @@
  ; Please Subscribe to my Youtube Channel.
  ; My GitHub Profile: https://github.com/HiDe-Techno-Tips
 
-ToolTip, Mouse Mapping is Off. Press %H1% to Toggle Mouse Mapping On and Off. Press %H2% to Exit from this Utility.   ; Displays Tooltip message with instruction.
+ToolTip, Mouse Mapping is Off. Press F1 to Toggle Mouse Mapping On and Off. Press F2 to Exit from this Utility.   ; Displays Tooltip message with instruction.
 ToggleMap=0                                                                                                           ; To specify that Mouse Mapping is Off.
 SetTimer, tipOff, -4000                                                                                               ; Label tipOff is referred after 4 secpnds.
 Suspend                                                                                                               ; Suspends Hotkeys.
@@ -86,7 +86,7 @@ Goto, MovementMap                   ; To run the MovementMap script again and ag
 ToggleMapping:  ; Label ToggleMapping.
 if (ToggleMap=0)
   {
-   ToolTip, Mouse Mapping is Turned On. Press %H1% to Toggle Mouse Mapping On and Off. Press %H2% to Exit from this Utility.      ; Displays ToolTip message that Mouse Mapping is turned On.
+   ToolTip, Mouse Mapping is Turned On. Press F1 to Toggle Mouse Mapping On and Off. Press F2 to Exit from this Utility.      ; Displays ToolTip message that Mouse Mapping is turned On.
    SystemCursor(0)              ; Hide Mouse Cursor.
    Suspend, Off                 ; Enable Hotkeys.
    ToggleMap=1                  ; To specify that Mouse Mapping is On.
@@ -94,7 +94,7 @@ if (ToggleMap=0)
   }
 else
   {
-   ToolTip, Mouse Mapping is Turned Off. Press %H1% to Toggle Mouse Mapping On and Off. Press %H2% to Exit from this Utility.     ; Displays ToolTip message that Mouse Mapping is turned Off.
+   ToolTip, Mouse Mapping is Turned Off. Press F1 to Toggle Mouse Mapping On and Off. Press F2 to Exit from this Utility.     ; Displays ToolTip message that Mouse Mapping is turned Off.
    SystemCursor(1)              ; Show Mouse Cursor.
    Suspend, On                  ; Disable Hotkeys.
    ToggleMap=0                  ; To specify that Mouse Mapping is Off.
