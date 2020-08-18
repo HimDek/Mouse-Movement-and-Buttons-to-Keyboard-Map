@@ -6,22 +6,26 @@
  ; Please Subscribe to my Youtube Channel.
  ; My GitHub Profile: https://github.com/HiDe-Techno-Tips
 
- ; Default Hotkeys:
- ; Press F6 to Show or Hide the Mouse Cursor.
- ; Press F7 to toggle Pause and Suspend.
- ; Press F8 to Start The Mouse Movement to Keyboard map.
+ToolTip, Mouse Mapping is Off. Press %H1% to Toggle Mouse Mapping On and Off. Press %H2% to Exit from this Utility.   ; Displays Tooltip message with instruction.
+ToggleMap=0                                                                                                           ; To specify that Mouse Mapping is Off.
+SetTimer, tipOff, -4000                                                                                               ; Label tipOff is referred after 4 secpnds.
+Suspend                                                                                                               ; Suspends Hotkeys.
+Goto MovementMap       ; Movement Mapping should start without Hotkey.
 
-F6::SystemCursor(-1)  ; Pressing the key before "::" shows or hides the Mouse Cursor.
-return
+ ; Hotkey Settings:
+ F2::             ; The key before "::" Exits from this Mouse Mapping Utility. 
+ Suspend, Off          ; Enables Hotkeys.
+ SystemCursor(1)       ; Shows Mouse Cursor if its Hidden.
+ ExitApp               ; Exits from this Mouse Mapping Utility
+ return
 
-F7::                  ; Pressing the key before "::" toggles Pause script and Suspend Hotkeys.
-Suspend
-Pause, , 1
-SystemCursor(1)       ; Shows the cursor if Script is Stopped.
-return
+ F1::             ; The key before "::" Switches this Utility On and Off.
+ Suspend               ; Toggles Disable and Enable Hotkeys.
+ Goto ToggleMapping    ; Label ToggleMapping is referred
+ return
 
- ; Mouse Buttons/Wheel to Keyboard Map.
- ; Pressing Mouse Buttons or rotating Wheel before "::" presses the key after "::" below.
+ ; Mouse Buttons/Wheel to Keyboard Map Settings:
+ ; Pressing Mouse Buttons or rotating Wheel before "::" presses the key after "::" below:
 LButton::u           ; For Left Mouse Button.
 RButton::o           ; For Right Mouse Button.
 MButton::8           ; For Middle Mouse Button.
@@ -32,54 +36,75 @@ WheelRight::Right        ; For Mouse Wheel Right of compatible Mouse.
 XButton1::9          ; For Mouse Thumb Button 1 of compatible Mouse.
 XButton2::3          ; For Mouse Thumb Button 2 of compatible Mouse.
 
- ; Keys to Simulate Left and Right Mouse Button while Hotkeys are active.
-[::LButton            ; The Key before "::" will work as Left Mouse Button while Hotkeys are active.
-]::RButton            ; The Key before "::" will work as Right Mouse Button while Hotkeys are active.
-
-F8::                ; Pressing key before "::" Starts the Main Script.
-Main:                ; Main Script starts from this label.
+ MovementMap:                 ; Movement Mapping Script starts from this label.
+if (ToggleMap=1)
+{
+ SystemCursor(0)       ; Mouse Cursor is hidden when the Movement Map script starts.
 
  ; Center Co-Ordinates for Mouse Cursor.
-x:=683
-y:=384
+ x:=683
+ y:=384
 
- ; Mouse Movement to Keyboard Map.
- ; Moving mouse towards the direction before "=" presses the key after "=" below.
-ToRight=j
-ToLeft=l
-ToUp=i
-ToDown=k
+  ; Mouse Movement to Keyboard Map Settings.
+  ; Moving mouse towards the direction before "=" presses the key after "=" below.
+ ToRight=j
+ ToLeft=l
+ ToUp=i
+ ToDown=k
 
-MouseMove, x, y         ; Move Mouse Cursor to the center Co-Ordinates.
-Sleep, 5
-MouseGetPos, x1, y1     ; Get New Mouse cursor Co-Ordinate after sleep time.
+ MouseMove, x, y         ; Move Mouse Cursor to the center Co-Ordinates.
+ Sleep, 5                ; Wait for 5 milli seconds.
+ MouseGetPos, x1, y1     ; Get New Mouse cursor Co-Ordinate.
 
-ax:=(2*((x1-x)+25))     ; Horizontal Displacement of Mouse Cursor modified such that center is 50.
-ay:=(2*((y1-y)+25))     ; Vertical Displacement of Mouse Cursor modified such that center is 50.
+ ax:=(2*((x1-x)+25))     ; Horizontal Displacement of Mouse Cursor modified such that center is 50.
+ ay:=(2*((y1-y)+25))     ; Vertical Displacement of Mouse Cursor modified such that center is 50.
 
-if (ax<50){                  ; Press and Hold the Right key if Mouse Cursor is moving towards right.
-Send {Blind}{%ToRight% down}
-}
-if (ax>50){                  ; Press and Hold the Left key if Mouse Cursor is moving towards left.
-Send {Blind}{%ToLeft% down}
-}
-if (ay<50){                  ; Press and Hold the Up key if Mouse Cursor is moving up.
-Send {Blind}{%ToUp% down}
-}
-if (ay>50){                  ; Press and Hold the Down key if Mouse Cursor is moving down.
-Send {Blind}{%ToDown% down}
-}
+ if (ax<50){                  ; Press and Hold the Right key if Mouse Cursor is moving towards right.
+ Send {Blind}{%ToRight% down}
+ }
+ if (ax>50){                  ; Press and Hold the Left key if Mouse Cursor is moving towards left.
+ Send {Blind}{%ToLeft% down}
+ }
+ if (ay<50){                  ; Press and Hold the Up key if Mouse Cursor is moving up.
+ Send {Blind}{%ToUp% down}
+ }
+ if (ay>50){                  ; Press and Hold the Down key if Mouse Cursor is moving down.
+ Send {Blind}{%ToDown% down}
+ }
 
-if (ax=50){                  ; Release Left and Right Keys if Mouse Cursor is not moving Horizontally.
-Send {Blind}{%ToRight% up}
-Send {Blind}{%ToLeft% up}
+ if (ax=50){                  ; Release Left and Right Keys if Mouse Cursor is not moving Horizontally.
+ Send {Blind}{%ToRight% up}
+ Send {Blind}{%ToLeft% up}
+ }
+ if (ay=50){                  ; Release Up and Down Keys if Mouse Cursor is not moving vertically.
+ Send {Blind}{%ToUp% up}
+ Send {Blind}{%ToDown% up}
+ }
 }
-if (ay=50){                  ; Release Up and Down Keys if Mouse Cursor is not moving vertically.
-Send {Blind}{%ToUp% up}
-Send {Blind}{%ToDown% up}
-}
+Goto, MovementMap                   ; To run the MovementMap script again and again without pressing hotkey.
 
-Goto, Main                   ; To run the Main script again and again without pressing hotkey.
+ToggleMapping:  ; Label ToggleMapping.
+if (ToggleMap=0)
+  {
+   ToolTip, Mouse Mapping is Turned On. Press %H1% to Toggle Mouse Mapping On and Off. Press %H2% to Exit from this Utility.      ; Displays ToolTip message that Mouse Mapping is turned On.
+   SystemCursor(0)              ; Hide Mouse Cursor.
+   Suspend, Off                 ; Enable Hotkeys.
+   ToggleMap=1                  ; To specify that Mouse Mapping is On.
+   SetTimer, tipoff, -4000      ; Label tipOff is referred after 4 seconds.
+  }
+else
+  {
+   ToolTip, Mouse Mapping is Turned Off. Press %H1% to Toggle Mouse Mapping On and Off. Press %H2% to Exit from this Utility.     ; Displays ToolTip message that Mouse Mapping is turned Off.
+   SystemCursor(1)              ; Show Mouse Cursor.
+   Suspend, On                  ; Disable Hotkeys.
+   ToggleMap=0                  ; To specify that Mouse Mapping is Off.
+   SetTimer, tipoff, -4000      ; Label tipOff is referred after 4 seconds.
+  }
+return
+
+ TipOff:       ; Label TipOff.
+ ToolTip,      ; To remove any ToolTip meggage.
+ return
 
  ; Function to Show or Hide the Mouse Cursor.
 SystemCursor(OnOff=1)   ; INIT = "I","Init"; OFF = 0,"Off"; TOGGLE = -1,"T","Toggle"; ON = others
