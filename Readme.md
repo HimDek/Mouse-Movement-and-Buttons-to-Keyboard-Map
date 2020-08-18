@@ -1,5 +1,6 @@
 ***
  Mouse to Keyboard Map Utility.
+ 
  Map Mouse Movements and Buttons to Keyboard keys Version 1.1.0
 * Author: Hide Techno Tips
 * Youtube Channel "HiDe Techno Tips HDTT"
@@ -21,31 +22,32 @@ How to Use version 1.1.0. Tested In Game.
 
 3. Press F1 to Turn Mouse Mapping On.
 
-*    When Mouse Mapping is On:
-*      Mouse Cursor will disappear.
+    * When Mouse Mapping is On:
+    
+      * Mouse Cursor will disappear.
+      * Mouse Buttons and Wheel will not work as usual
+      * Mouse Buttons will simulate keypress as follows:
+      
+        * Left Mouse Button:   U
+        * Right Mouse Button:  O
+        * Middle Mouse Button: 8
 
-*      Mouse Buttons and Wheel will not work as usual
+        * Mouse Wheel up:   Up Arrow
+        * Mouse Wheel down: Down Arrow
 
-*      Mouse Buttons will simulate keypress as follows:
-*        Left Mouse Button:   U
-*        Right Mouse Button:  O
-*        Middle Mouse Button: 8
+        * Mouse Wheel Left of compatible Mouse: Left Arrow
+        * Mouse Wheel Right of compatible Mouse: Right Arrow
 
-*        Mouse Wheel up:   Up Arrow
-*        Mouse Wheel down: Down Arrow
+        * Mouse Thumb Button 1 of compatible Mouse: 9
+        * Mouse Thumb Button 2 of compatible Mouse: 3
 
-*        Mouse Wheel Left of compatible Mouse: Left Arrow
-*        Mouse Wheel Right of compatible Mouse: Right Arrow
+      * Moving the mouse in specific directions will press the buttons as stated below:
+      
+        * Up:     I
+        * Down:   K
+        * Left:   J
+        * Right:  L
 
-*        Mouse Thumb Button 1 of compatible Mouse: 9
-*        Mouse Thumb Button 2 of compatible Mouse: 3
-
-*      Moving the mouse in specific directions will press the buttons as stated below:
-*        Up:     I
-*        Down:   K
-*        Left:   J
-*        Right:  L
-*
 4. Press F1 to Turn Mouse Mapping Off.
 
 5. Press F2 anytime to Exit from this Mouse Mapping Utility.
