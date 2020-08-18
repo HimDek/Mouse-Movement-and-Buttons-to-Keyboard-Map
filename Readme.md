@@ -28,25 +28,25 @@ How to Use version 1.1.0. Tested In Game.
       * Mouse Buttons and Wheel will not work as usual
       * Mouse Buttons will simulate keypress as follows:
       
-       * Left Mouse Button:   U
-       * Right Mouse Button:  O
-       * Middle Mouse Button: 8
+        * Left Mouse Button:   U
+        * Right Mouse Button:  O
+        * Middle Mouse Button: 8
 
-       * Mouse Wheel up:   Up Arrow
-       * Mouse Wheel down: Down Arrow
+        * Mouse Wheel up:   Up Arrow
+        * Mouse Wheel down: Down Arrow
 
-       * Mouse Wheel Left of compatible Mouse: Left Arrow
-       * Mouse Wheel Right of compatible Mouse: Right Arrow
+        * Mouse Wheel Left of compatible Mouse: Left Arrow
+        * Mouse Wheel Right of compatible Mouse: Right Arrow
 
-       * Mouse Thumb Button 1 of compatible Mouse: 9
-       * Mouse Thumb Button 2 of compatible Mouse: 3
+        * Mouse Thumb Button 1 of compatible Mouse: 9
+        * Mouse Thumb Button 2 of compatible Mouse: 3
 
       * Moving the mouse in specific directions will press the buttons as stated below:
       
-       * Up:     I
-       * Down:   K
-       * Left:   J
-       * Right:  L
+        * Up:     I
+        * Down:   K
+        * Left:   J
+        * Right:  L
 
 4. Press F1 to Turn Mouse Mapping Off.
 
