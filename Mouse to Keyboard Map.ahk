@@ -5,6 +5,7 @@
  ; Youtube Channel "HiDe Techno Tips HDTT" Link: https://www.youtube.com/channel/UCy3fBVKd0RMY05CgiiuGqSA?sub_confirmation=1
  ; Please Subscribe to my Youtube Channel.
  ; My GitHub Profile: https://github.com/HiDe-Techno-Tips
+ ; Video Guide: https://youtu.be/c3S9OYJlKKU
 
 ToolTip, Mouse Mapping is Off. Press F1 to Toggle Mouse Mapping On and Off. Press F2 to Exit from this Utility.   ; Displays Tooltip message with instruction.
 ToggleMap=0                                                                                                           ; To specify that Mouse Mapping is Off.
