@@ -41,7 +41,7 @@ How to Use version 1.1.0. Tested In Game.
         * Mouse Thumb Button 1 of compatible Mouse: 9
         * Mouse Thumb Button 2 of compatible Mouse: 3
 
-      * Moving the mouse in specific directions will press the buttons as stated below:
+      * Moving the mouse in specific directions will press keys as stated below:
       
         * Up:     I
         * Down:   K
