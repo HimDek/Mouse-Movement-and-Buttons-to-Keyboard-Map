@@ -1,20 +1,9 @@
-***
- Mouse to Keyboard Map Utility Version 1.1.0
- 
- Map Mouse Movements and Buttons to Keyboard keys.
-* Author: Hide Techno Tips
-  * Youtube Channel "HiDe Techno Tips HDTT"
-    * Link: https://www.youtube.com/channel/UCy3fBVKd0RMY05CgiiuGqSA?sub_confirmation=1
-    * Please Subscribe to my Youtube Channel.
-  * My GitHub Profile: https://github.com/HiDe-Techno-Tips
-***
-Changes in Version 1.1.0:
 
-* Several Bug Fixes.
-* Feature Update (Refer to How to use Version 1.1.0 below)
-* Hotkey Changes (Refer to How to use Version 1.1.0 below)
-***
-How to Use version 1.1.0. Tested In Game.
+# Mouse to Keyboard Map
+ 
+Map Mouse Movements and Buttons to Keyboard keys. This is usefull for games or emulators that do not support mouse inputs.
+
+## How to Use:
 
 Video Guide:https://youtu.be/c3S9OYJlKKU
 
@@ -53,4 +42,3 @@ Video Guide:https://youtu.be/c3S9OYJlKKU
 4. Press F1 to Turn Mouse Mapping Off.
 
 5. Press F2 anytime to Exit from this Mouse Mapping Utility.
-***
