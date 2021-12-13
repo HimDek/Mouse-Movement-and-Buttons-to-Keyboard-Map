@@ -1,7 +1,7 @@
 
 # Mouse to Keyboard Map
  
-Map Mouse Movements and Buttons to Keyboard keys. This is usefull for games or emulators that do not support mouse inputs.
+Map Mouse Movements and Buttons to Keyboard keys. This is usefull for games or emulators that do not support mouse inputs. This AHK Script makes Mouse Movement directions and Buttons act like Keyboard Keys set by you.
 
 ## How to Use:
 
